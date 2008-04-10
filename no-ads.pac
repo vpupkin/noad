@@ -37,7 +37,8 @@ var normal = "DIRECT";
 // *** of your blackhole proxy server.  If you are using Larry Wang's
 // *** BHP for Windows, you need to change the "0.0.0.0" to "127.0.0.1"
 // ***
-var blackhole = "PROXY 0.0.0.0:3421";
+//var blackhole = "PROXY 0.0.0.0:3421";
+var blackhole = "PROXY somebody.net:80";
 
 // ***
 // *** If you need a different proxy to access local/internal hosts vs.
