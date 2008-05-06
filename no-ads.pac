@@ -1176,8 +1176,15 @@ function FindProxyForURL(url, host)
 		|| shExpMatch(url, "*swf")
 	    )
 	)
+	//http://body.imho.ru/html.ng/impt=imp&place=xakep_frontline&id=310807&transactionID=
 	
 	//RAMBLER swf
+	|| (dnsDomainIs(host, "body.imho.ru")
+	    && (
+	        shExpMatch(url, "*html.ng*")
+	    )
+	)
+
 	//http://images.rambler.ru/upl/r3/rambler_728-90.swf
 	//http://images.rambler.ru/upl/r3/rambler_728-90.swf?link1=http://ad3.rambler.ru/roff/ban.clk?pg=5581%26bn=154094"
 	|| (dnsDomainIs(host, "images.rambler.ru")
