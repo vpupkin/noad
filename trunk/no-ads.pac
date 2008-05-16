@@ -838,7 +838,9 @@ function FindProxyForURL(url, host)
 	    && shExpMatch(url, "*/media/*"))
 	|| (dnsDomainIs(host, ".buy.com")
 	    && shExpMatch(url, "*/affiliate/*"))
-
+// //http://www.jpc-partner.de/dam.php?partner=
+	|| (dnsDomainIs(host, "www.jpc-partner.de")
+	    && (shExpMatch(url, "*partner=*")
 	|| (dnsDomainIs(host, "pdaphonehome.com")
 	    && (shExpMatch(url, "*/pocketpcmagbest.gif")
 		|| shExpMatch(url, "*/link-msmobiles.gif")))
