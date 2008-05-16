@@ -37,7 +37,7 @@ var normal = "DIRECT";
 // *** of your blackhole proxy server.  If you are using Larry Wang's
 // *** BHP for Windows, you need to change the "0.0.0.0" to "127.0.0.1"
 // ***
-var blackhole = "PROXY 0.0.0.0:3421";
+var blackhole = "PROXY vipup.sytes.net:8213";
 
 // ***
 // *** If you need a different proxy to access local/internal hosts vs.
@@ -662,8 +662,7 @@ function FindProxyForURL(url, host)
 
 // runet
 // http://raf01.rambler.ru:8080/img/2/28/28d4d3de5b00efdc3064954e44d74e52.gif
-	|| ((dnsDomainIs(host, "rambler.ru")
-	    && (shExpMatch(url, "*/img/*"))
+
 	|| dnsDomainIs(host, "counter.yadro.ru")
 	|| dnsDomainIs(host, "ad.adriver.ru")
 	|| dnsDomainIs(host, "ad3.rambler.ru")
@@ -671,16 +670,6 @@ function FindProxyForURL(url, host)
 	|| dnsDomainIs(host, "pobeg.rambler.ru")
 	|| dnsDomainIs(host, "beta.rambler.ru")
 //http://images.rambler.ru/upl/root/cat.gif	
-	
-	// http://www.jpc-partner.de/dam.php?partner=
-	|| ((dnsDomainIs(host, "www.jpc-partner.de")
-	    && (shExpMatch(url, "*partner*"))
-	//http://www.jpc.de/image/h66/front/0/0888072306301.jpg	    
-	|| ((dnsDomainIs(host, "www.jpc.de")
-	    && (shExpMatch(url, "*image*"))
-	//http://werbung.ru/upload_banner/mini-abo.gif	    
-	|| ((dnsDomainIs(host, "werbung.ru")
-	    && (shExpMatch(url, "*banner*"))	
 	
 	|| dnsDomainIs(host, "top100-images.rambler.ru")
 	|| dnsDomainIs(host, "raf01.rambler.ru")
@@ -857,8 +846,6 @@ function FindProxyForURL(url, host)
 	// more animated ads... these really drive me crazy
 	|| (dnsDomainIs(host, ".freewarepalm.com")
 	    && shExpMatch(url, "*/sponsors/*"))
-
-
 
 	//////
 	//
