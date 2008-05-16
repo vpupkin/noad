@@ -838,13 +838,13 @@ function FindProxyForURL(url, host)
 	    && shExpMatch(url, "*/media/*"))
 	|| (dnsDomainIs(host, ".buy.com")
 	    && shExpMatch(url, "*/affiliate/*"))
-// //http://www.jpc-partner.de/dam.php?partner=
-	|| (dnsDomainIs(host, "jpc-partner.de")
+	// http://www.jpc-partner.de/dam.php?partner=
+	|| (dnsDomainIs(host, "www.jpc-partner.de")
 	    && (shExpMatch(url, "*partner*")
-	|| (dnsDomainIs(host, ".www.jpc.de")
 	//http://www.jpc.de/image/h66/front/0/0888072306301.jpg	    
+	|| (dnsDomainIs(host, "www.jpc.de")
 	    && (shExpMatch(url, "*image*")
-//http://werbung.ru/upload_banner/mini-abo.gif	    
+	//http://werbung.ru/upload_banner/mini-abo.gif	    
 	|| (dnsDomainIs(host, "werbung.ru")
 	    && (shExpMatch(url, "*banner*")
 	|| (dnsDomainIs(host, "pdaphonehome.com")
