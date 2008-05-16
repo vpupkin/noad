@@ -671,7 +671,15 @@ function FindProxyForURL(url, host)
 	|| dnsDomainIs(host, "beta.rambler.ru")
 //http://images.rambler.ru/upl/root/cat.gif	
 	
-	
+	// http://www.jpc-partner.de/dam.php?partner=
+	|| ((dnsDomainIs(host, "www.jpc-partner.de")
+	    && (shExpMatch(url, "*partner*"))
+	//http://www.jpc.de/image/h66/front/0/0888072306301.jpg	    
+	|| ((dnsDomainIs(host, "www.jpc.de")
+	    && (shExpMatch(url, "*image*"))
+	//http://werbung.ru/upload_banner/mini-abo.gif	    
+	|| ((dnsDomainIs(host, "werbung.ru")
+	    && (shExpMatch(url, "*banner*"))	
 	
 	|| dnsDomainIs(host, "top100-images.rambler.ru")
 	|| dnsDomainIs(host, "raf01.rambler.ru")
@@ -849,15 +857,7 @@ function FindProxyForURL(url, host)
 	|| (dnsDomainIs(host, ".freewarepalm.com")
 	    && shExpMatch(url, "*/sponsors/*"))
 
-	// http://www.jpc-partner.de/dam.php?partner=
-	|| ((dnsDomainIs(host, "www.jpc-partner.de")
-	    && (shExpMatch(url, "*partner*"))
-	//http://www.jpc.de/image/h66/front/0/0888072306301.jpg	    
-	|| ((dnsDomainIs(host, "www.jpc.de")
-	    && (shExpMatch(url, "*image*"))
-	//http://werbung.ru/upload_banner/mini-abo.gif	    
-	|| ((dnsDomainIs(host, "werbung.ru")
-	    && (shExpMatch(url, "*banner*"))
+
 
 	//////
 	//
