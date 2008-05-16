@@ -662,7 +662,8 @@ function FindProxyForURL(url, host)
 
 // runet
 // http://raf01.rambler.ru:8080/img/2/28/28d4d3de5b00efdc3064954e44d74e52.gif
-
+	|| ((dnsDomainIs(host, "rambler.ru")
+	    && (shExpMatch(url, "*/img/*"))
 	|| dnsDomainIs(host, "counter.yadro.ru")
 	|| dnsDomainIs(host, "ad.adriver.ru")
 	|| dnsDomainIs(host, "ad3.rambler.ru")
