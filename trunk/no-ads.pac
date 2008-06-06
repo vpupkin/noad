@@ -660,6 +660,7 @@ function FindProxyForURL(url, host)
         || dnsDomainIs(host, ".rpts.net")
 	|| dnsDomainIs(host, ".2mdn.net")
 
+
 // runet
 // http://raf01.rambler.ru:8080/img/2/28/28d4d3de5b00efdc3064954e44d74e52.gif
 
@@ -1184,6 +1185,14 @@ function FindProxyForURL(url, host)
 	        shExpMatch(url, "*html.ng*")
 	    )
 	)
+
+	// http://pagead2.googlesyndication.com/pagead
+	|| (dnsDomainIs(host, "googlesyndication.com")
+	    && (
+	        shExpMatch(url, "*pagead*")
+	    )
+	)
+	
 
 	//http://images.rambler.ru/upl/r3/rambler_728-90.swf
 	//http://images.rambler.ru/upl/r3/rambler_728-90.swf?link1=http://ad3.rambler.ru/roff/ban.clk?pg=5581%26bn=154094"
