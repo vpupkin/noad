@@ -1192,7 +1192,13 @@ function FindProxyForURL(url, host)
 	        shExpMatch(url, "*pagead*")
 	    )
 	)
-	
+	//http://www.google-analytics.com/urchin.js
+	|| (dnsDomainIs(host, "www.google-analytics.com")
+	    && (
+	        shExpMatch(url, "*urchin.js*")
+	    )
+	)
+
 
 	//http://images.rambler.ru/upl/r3/rambler_728-90.swf
 	//http://images.rambler.ru/upl/r3/rambler_728-90.swf?link1=http://ad3.rambler.ru/roff/ban.clk?pg=5581%26bn=154094"
