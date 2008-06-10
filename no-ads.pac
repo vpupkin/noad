@@ -1199,6 +1199,13 @@ function FindProxyForURL(url, host)
 	    )
 	)
 
+	// http://im.adtech.de/addyn|3.0|515|1008242|0|16|KEY=08us%2bisBetting;loc=100;grp=627965438;target=_blank;misc=1213130463
+	|| (dnsDomainIs(host, "im.adtech.de")
+	    && (
+	        shExpMatch(url, "*addyn*")
+	    )
+	)
+
 
 	//http://images.rambler.ru/upl/r3/rambler_728-90.swf
 	//http://images.rambler.ru/upl/r3/rambler_728-90.swf?link1=http://ad3.rambler.ru/roff/ban.clk?pg=5581%26bn=154094"
