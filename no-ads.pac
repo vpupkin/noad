@@ -1214,7 +1214,12 @@ function FindProxyForURL(url, host)
 	        shExpMatch(url, "*swf*")
 	    )
 	)
-
+	// begun
+    || (dnsDomainIs(host, "autocontext.begun.ru")
+	    && (
+	        shExpMatch(url, "*.js*")
+	    )
+	)	
 
 	// Staples & CrossMediaServices
 	|| (dnsDomainIs(host, ".staples.com")
